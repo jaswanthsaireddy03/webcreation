@@ -1,0 +1,79 @@
+<h1>keywords</h1>
+In C language, a keyword is a reserved word that has a specific meaning and purpose in the language. Keywords cannot be used as variable names or identifiers because they are already reserved for specific uses.
+<h1>control structures decision making and branching</h1>
+In C language, decision-making and branching control structures are used to make decisions based on certain conditions and execute different sets of statements based on those decisions.<br>
+
+The if statement is a common decision-making control structure in C. It allows the program to execute a block of code if a certain condition is true. Here's an example:<br>
+
+int num = 5;<br>
+
+if (num > 0) {<br>
+    printf("The number is positive.\n");<br>
+}<br>
+
+In this example, the if statement checks whether the value of num is greater than 0. If it is, the program executes the block of code inside the curly braces { }, which in this case, prints a message to the console indicating that the number is positive.<br>
+
+The if-else statement is another decision-making control structure in C. It allows the program to execute one block of code if a certain condition is true, and another block of code if the condition is false. Here's an example:<br>
+
+
+int num = -2;<br>
+
+if (num > 0) {<br>
+    printf("The number is positive.\n");<br>
+} else {<br>
+    printf("The number is non-positive.\n");<br>
+}<br>
+
+In this example, the if-else statement checks whether the value of num is greater than 0. If it is, the program executes the first block of code, which prints a message indicating that the number is positive. If it is not, the program executes the second block of code, which prints a message indicating that the number is non-positive.<br>
+
+The switch statement is another decision-making control structure in C. It allows the program to execute different blocks of code based on the value of an expression. Here's an example:<br>
+
+int num = 3;<br>
+
+switch (num) {<br>
+    case 1:<br>
+        printf("The number is one.\n");<br>
+        break;<br>
+    case 2:<br>
+        printf("The number is two.\n");<br>
+        break;<br>
+    case 3:<br>
+        printf("The number is three.\n");<br>
+        break;<br>
+    default:<br>
+        printf("The number is not one, two, or three.\n");<br>
+        break;<br>
+}<br>
+
+In this example, the switch statement checks the value of the variable num. Depending on the value, the program executes a different block of code. If num is 1, the program prints a message indicating that the number is one. If num is 2, the program prints a message indicating that the number is two. If num is 3, the program prints a message indicating that the number is three. If num is any other value, the program executes the default block of code, which prints a message indicating that the number is not one, two, or three.<br>
+
+Overall, decision-making and branching control structures are important for creating dynamic and flexible programs that can handle different situations based on certain conditions.<br>
+Here are some examples of C language keywords:
+
+int: used to declare a variable as an integer type
+float: used to declare a variable as a floating-point type
+if: used to specify a condition for conditional statements
+while: used to specify a condition for a loop statement
+return: used to return a value from a function
+switch: used to specify a set of possible values for a variable and execute different code blocks based on the value of the variable.<br>
+Here is an example of how keywords are used in a C program:
+
+#include <stdio.h>
+
+    int main() {
+       int num1, num2, sum;
+       
+       printf("Enter two numbers: ");
+       scanf("%d %d", &num1, &num2);
+       
+       sum = num1 + num2;
+       
+       printf("The sum of %d and %d is %d", num1, num2, sum);
+       
+       return 0;
+    }
+
+
+    In this example, int, printf, scanf, and return are all C keywords that have a specific meaning 
+    in the language. The variables num1, num2, and sum are declared using the int keyword to specify that they are integer types. 
+    The if keyword is not used in this example, but it could be used to specify a condition for a conditional statement.

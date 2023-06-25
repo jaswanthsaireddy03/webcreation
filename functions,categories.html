@@ -1,0 +1,65 @@
+Functions in C programming language are blocks of code that perform specific tasks. They help in breaking down a complex problem into smaller and manageable parts. Functions are an essential part of any program written in C, and they can be classified into four categories:<br>
+
+1.Library Functions: These functions are already built-in into the C library and can be used directly in the program without the need for any additional code. Examples of library functions include printf(), scanf(), strlen(), strcpy(), etc.<br>
+
+2.User-Defined Functions: These are functions that are created by the user to perform specific tasks. They are defined by the user, and their purpose can be customized according to the needs of the program.<br>
+
+3.Recursive Functions: These functions are used when a problem can be broken down into smaller sub-problems that are similar in nature. Recursive functions call themselves repeatedly to solve the problem by breaking it down into smaller parts.<br>
+
+4.Inline Functions: These functions are used to improve program efficiency by avoiding function call overhead. Inline functions are small, and their code is inserted directly into the calling function instead of calling the function.<br>
+
+5.C programs themselves can be classified into various categories based on their purpose and functionality. Some common categories of C programs include:<br>
+
+6.System Programs: These programs are designed to interact with the operating system and perform system-level tasks such as file management, memory management, etc.<br>
+
+7.Application Programs: These programs are designed to perform specific tasks or functions that are useful to end-users. Examples of application programs include word processors, spreadsheet programs, games, etc.<br>
+
+8.Device Drivers: These programs are used to communicate with hardware devices and manage their operations.<br>
+
+9.Network Programs: These programs are designed to communicate over the network and exchange data between different systems.<br>
+
+10.Embedded Programs: These programs are used to control embedded systems and perform specific tasks such as controlling a robot or a microcontroller-based device.<br>
+
+
+-->Here's an example program in C that demonstrates the use of different types of functions and falls into the category of Application Programs:<br>
+
+arduino<br>
+Copy code<br>
+#include <stdio.h><br>
+#include <stdlib.h><br>
+
+// Function Prototypes<br>
+int add(int a, int b);<br>
+int subtract(int a, int b);<br>
+int multiply(int a, int b);<br>
+
+// Main Function<br>
+int main() {<br>
+    int a = 5, b = 3;<br>
+    int sum, difference, product;<br>
+
+    // Calling User-Defined Functions<br>
+    sum = add(a, b);<br>
+    difference = subtract(a, b);<br>
+    product = multiply(a, b);<br>
+
+    // Printing Results<br>
+    printf("The sum of %d and %d is %d\n", a, b, sum);<br>
+    printf("The difference of %d and %d is %d\n", a, b, difference);<br>
+    printf("The product of %d and %d is %d\n", a, b, product);<br>
+
+    return 0;<br>
+}<br>
+
+// User-Defined Functions<br>
+int add(int a, int b) {<br>
+    return a + b;<br>
+}<br>
+
+int subtract(int a, int b) {<br>
+    return a - b;<br>
+}<br>
+
+int multiply(int a, int b) {<br>
+    return a * b;<br>
+}<br>

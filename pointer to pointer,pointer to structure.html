@@ -1,0 +1,33 @@
+In C programming language, a pointer to pointer is a variable that holds the memory address of another pointer. A pointer to structure is a variable that holds the memory address of a structure.<br>
+
+Here is an example program that demonstrates pointer to pointer and pointer to structure:<br>
+
+#include <stdio.h><br>
+
+struct student {<br>
+    char name[50];<br>
+    int age;<br>
+};<br>
+
+int main() {<br>
+    struct student stu = {"John Doe", 20};<br>
+    struct student *ptr1;<br>
+    struct student **ptr2;<br>
+
+    ptr1 = &stu;<br>
+    ptr2 = &ptr1;<br>
+
+    printf("Name: %s\n", (*ptr2)->name);<br>
+    printf("Age: %d\n", (*ptr2)->age);<br>
+
+    return 0;<br>
+}<br>
+-->In this program, a structure student is defined with two fields name and age. Then, an instance of the structure stu is created and initialized with the values "John Doe" and 20.<br>
+
+Next, a pointer ptr1 to the structure student is declared and initialized to the memory address of stu. Then, a pointer ptr2 to a pointer to the structure student is declared and initialized to the memory address of ptr1.<br>
+
+To access the fields of the structure stu using the pointer to pointer ptr2, we use the -> operator twice: the first -> operator dereferences ptr2 to obtain ptr1, and the second -> operator dereferences ptr1 to obtain the structure stu.<br>
+
+The program then prints the name and age of the structure stu using the dereferenced pointer to pointer ptr2.<br>
+
+Note that using pointers to pointers and pointers to structures can be useful in situations where we need to pass pointers to functions or return pointers from functions.<br>

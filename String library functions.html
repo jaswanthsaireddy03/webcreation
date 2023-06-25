@@ -1,0 +1,49 @@
+The string library is a built-in library in many programming languages that provides various functions for working with strings. Some common functions that are available in many programming languages include:<br>
+
+1.strlen(): This function returns the length of a string.<br>
+
+2.strcpy(): This function copies the contents of one string to another.<br>
+
+3.strcat(): This function concatenates two strings together.<br>
+
+4.strcmp(): This function compares two strings and returns a value indicating their relative order.<br>
+
+5.strchr(): This function searches a string for the first occurrence of a specified character and returns a pointer to that character.<br>
+
+6.strstr(): This function searches a string for the first occurrence of a specified substring and returns a pointer to the start of the substring.<br>
+
+7.strtol(): This function converts a string to a long integer.<br>
+
+8.strtod(): This function converts a string to a double-precision floating-point number.<br>
+
+* These are just a few examples of the functions available in the string library. The exact set of functions and their names may vary depending on the programming language you are using.<br>
+
+
+-->Here is an example program in C that demonstrates the use of some of the string library functions:<br>
+
+arduino<br>
+
+#include <stdio.h><br>
+    #include <string.h><br>
+    
+    int main() {<br>
+        char str1[20] = "Hello";<br>
+        char str2[20] = "World";<br>
+    
+        // strlen()<br>
+        printf("Length of str1 is %d\n", strlen(str1));<br>
+    
+        // strcpy()<br>
+        strcpy(str1, str2);<br>
+        printf("After copying str2 to str1, str1 is %s\n", str1);<br>
+    
+        // strcat()<br>
+        strcat(str1, "!");<br>
+        printf("After concatenating '!' to str1, str1 is %s\n", str1);<br>
+    
+        // strcmp()<br>
+        int result = strcmp(str1, str2);<br>
+        if (result == 0) {<br>
+            printf("str1 and str2 are equal\n");<br>
+        } else if <br>
+        (result < 0) <br>{<br>

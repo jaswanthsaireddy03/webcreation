@@ -1,0 +1,48 @@
+<center><h1>constants and variables</h1></center>
+In C language, variables and constants are used to store values, but they differ in their properties and usage.<br>
+
+A variable is a named location in memory that can be used to store a value. The value stored in a variable can be changed during program execution. In C, variables are declared with a data type, which specifies the type of value that can be stored in the variable.
+
+Here is an example of a variable in C:<br>
+
+#include <stdio.h><br>
+
+    int main() {<br>
+       int age = 42;<br>
+    
+       printf("I am %d years old\n", age);<br>
+    
+       return 0;<br>
+    }<br>
+
+    In this example, age is a variable of type int that is assigned a value of 42. The printf statement uses the %d format specifier to print the value of age.<br>
+
+A constant, on the other hand, is a value that cannot be changed during program execution. In C, constants are declared with the const keyword, and they can be of any data type.<br>
+
+Here is an example of a constant in C:<br>
+
+#include <stdio.h><br>
+
+    int main() {<br>
+       const float PI = 3.14;<br>
+    
+       printf("The value of PI is %f\n", PI);<br>
+    
+       return 0;<br>
+    }<br>
+
+    In this example, PI is a constant of type float that is assigned a value of 3.14 using the const keyword. The value of PI cannot be changed during program execution.<br>
+
+It's important to note that in C, constants can also be created using the #define directive, which creates a symbolic constant. <br>For example:<br>
+
+#include <stdio.h><br>
+
+    #define MAX_NUM 100<br>
+    
+    int main() {<br>
+       printf("The maximum number is %d\n", MAX_NUM);<br>
+    
+       return 0;<br>
+    }<br>
+
+    In this example, MAX_NUM is a symbolic constant that is defined using the #define directive. The value of MAX_NUM cannot be changed during program execution, and it is used to define a maximum number that can be used in the program.

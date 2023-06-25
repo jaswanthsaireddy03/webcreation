@@ -1,0 +1,59 @@
+In C programming language, a pointer to pointer is a variable that holds the memory address of another pointer. A pointer to structure is a variable that holds the memory address of a structure.<br>
+
+Here is an example program that demonstrates pointer to pointer and pointer to structure:<br>
+
+
+
+#include <stdio.h><br>
+
+struct student {<br>
+    char name[50];<br>
+    int age;<br>
+};<br>
+
+int main() {<br>
+    struct student stu = {"John Doe", 20};<br>
+    struct student *ptr1;<br>
+    struct student **ptr2;<br>
+
+    ptr1 = &stu;<br>
+    ptr2 = &ptr1;<br>
+
+    printf("Name: %s\n", (*ptr2)->name);<br>
+    printf("Age: %d\n", (*ptr2)->age);<br>
+
+    return 0;<br>
+}<br>
+In this program, a structure student is defined with two fields name and age. Then, an instance of the structure stu is created and initialized with the values "John Doe" and 20.<br>
+
+Next, a pointer ptr1 to the structure student is declared and initialized to the memory address of stu. Then, a pointer ptr2 to a pointer to the structure student is declared and initialized to the memory address of ptr1.<br>
+
+To access the fields of the structure stu using the pointer to pointer ptr2, we use the -> operator twice: the first -> operator dereferences ptr2 to obtain ptr1, and the second -> operator dereferences ptr1 to obtain the structure stu.<br>
+
+The program then prints the name and age of the structure stu using the dereferenced pointer to pointer ptr2.<br>
+
+In C programming language, a pointer is a variable that holds the memory address of another variable. Pointers can be initialized to a memory address using the & operator, which returns the address of a variable, or using a pointer constant, which is a memory address written in hexadecimal notation.<br>
+
+Here is an example program that demonstrates pointer initialization and accessing elements using pointer arithmetic:<br>
+
+#include <stdio.h><br>
+
+int main() {<br>
+    int arr[5] = {1, 2, 3, 4, 5};<br>
+    int *p, i;<br>
+
+    p = &arr[0];<br>
+
+    for (i = 0; i < 5; i++) {<br>
+        printf("*(p+%d) = %d\n", i, *(p+i));<br>
+    }<br>
+
+    return 0;<br>
+}<br>
+--></5>In this program, an integer array arr of size 5 is declared and initialized with the values 1, 2, 3, 4, and 5. Then, a pointer p to an integer is declared.<br>
+
+The pointer p is initialized to the memory address of the first element of the array arr using the & operator.<br>
+
+To access the elements of the array arr using the pointer p, we use pointer arithmetic. The expression *(p+i) returns the value at the memory location that is i integers away from the memory location pointed to by p. The printf statement in the for loop prints the values of the array arr using the pointer p and pointer arithmetic.<br>
+
+Note that pointer arithmetic can also be used to modify the values of the array elements using pointers. For example, the statement *(p+2) = 10 sets the value of the third element of the array arr to 10.<br>

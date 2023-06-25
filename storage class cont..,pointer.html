@@ -1,0 +1,77 @@
+The static storage class is used to declare variables that retain their value between function calls. Static variables are initialized only once and retain their value until the program ends. Here's an example program that demonstrates the use of static storage class:<br>
+
+#include <stdio.h><br>
+
+void counter() {<br>
+    static int count = 0;<br>
+
+    count++;<br>
+
+    printf("The count is %d\n", count);<br>
+}<br>
+
+int main() {<br>
+    counter();<br>
+    counter();<br>
+    counter();<br>
+
+    return 0;<br>
+}<br>
+-->In this program, the variable count is declared inside the counter() function with the static storage class. This means that the variable retains its value between function calls and is initialized only once.<br>
+
+The extern storage class is used to declare variables that are defined in another file or module. The extern keyword tells the compiler that the variable is defined elsewhere, and it should be linked to that definition at link time. Here's an example program that demonstrates the use of extern storage class:<br>
+
+arduino<br>
+
+// file1.c<br>
+#include <stdio.h><br>
+
+int count = 5;<br>
+
+void func();<br>
+
+int main() {<br>
+    printf("The count is %d\n", count);<br>
+
+    func();<br>
+
+    printf("The count is %d\n", count);<br>
+
+    return 0;<br>
+}<br>
+
+// file2.c<br>
+#include <stdio.h><br>
+
+extern int count;<br>
+
+void func() {<br>
+    count++;<br>
+
+    printf("The count inside func is %d\n", count);<br>
+}<br>
+In this program, the variable count is declared in file1.c and defined as extern in file2.c. This means that the variable is defined in another file, and the extern keyword tells the compiler to link it to that definition at link time.<br>
+
+Pointers in C are variables that store the memory addresses of other variables. They provide a powerful and flexible way to manipulate data in memory. Here's an example program that demonstrates the use of pointers:<br>
+
+perl<br>
+
+#include <stdio.h><br>
+
+int main() {<br>
+    int num = 5;<br>
+    int *p;<br>
+
+    p = &num;<br>
+
+    printf("The value of num is %d\n", num);<br>
+    printf("The value of p is %p\n", p);<br>
+    printf("The value pointed to by p is %d\n", *p);<br>
+
+    *p = 10;<br>
+
+    printf("The value of num is now %d\n", num);<br>
+
+    return 0;<br>
+}<br>
+In this program, a variable num is declared and initialized to 5. A pointer variable p is declared, and its value is set to the address of num using the & operator. The program then prints the values of num, p, and the value pointed to by p. The program then changes the value pointed to by p to 10 and prints the new value of num.<br>
